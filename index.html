@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Savannah Raley">
+    <title>The Mountain Goats</title>
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+        <h1>The Mountain Goats</h1>
+        
+        <nav>
+            <h2 class="sr-only">Main Navigation</h2>
+            <ul>
+                <li ><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#game">Play to Win</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="shop">
+            <div id="bg-img"></div>
+            <h2 class="larger-h2">Jenny from thebes out now</h2>
+            <a href="#" class="bttn-style">Shop now</a>
+        </section>
+
+        <section id="about">
+            <div class="text-content">
+                <h2>About</h2>
+                <p>The Mountain Goats are, for all practical purposes, the endlessly clever and prolific John Darnielle and whomever he chooses to work with at the moment, which means the  sound may change from project to project, but the overall tone and feel of his work remains remarkably consistent. Darnielle writes finely observed,  impressionistic vignettes that blend a clear, realistic sense of detail  with mildly surreal imaginings, giving his work a literary flavor that  suits his status as a songwriter who is also a successful novelist. His  early Mountain Goats releases were lo-fi, cassette-recorded efforts cut  with a rotating cast of musicians, such as 1995's Nine Black Poppies and 2000's The Coroner's Gambit. By 2005's The Sunset Tree, his recordings  had become cleaner and less cluttered, but his character studies were  just as vivid. As the Mountain Goats cohered into a stable lineup (with Darnielle joined by Peter Hughes, Matt Douglas, and Jon Wurster), they recorded  tuneful, thematically unified albums such as Beat the Champ (2015) and  Jenny from Thebes (2023) that ranked with their finest work.</p>
+            </div>
+
+            <div class="image-content"><img src="images/about-img-alt.jpg" alt="Lead singer John Darnielle surrounded by three of his bandmates against a golden backdrop"></div>
+        </section>
+
+        <section id="music">
+            <h2>Music</h2>
+            <p>A selection of some of their best works</p>
+
+            <div id="button-group">
+                <button>Jenny From Thebes</button>
+                <button>All Hail west Texas</button>
+                <button>Heretic Pride</button>
+                <button>The Sunset Tree</button>
+                <button>Tallahassee </button>
+            </div>
+
+            <div id="product-display">
+                <img src="images/jenny_album.webp" alt=""> 
+
+                <h3 id="album-title">Jenny From Thebes</h3>
+                <p id="release-year">2023</p>
+
+                <dl>
+                    <dt>Track list</dt>
+                    <dd>Clean Slate	</dd>
+                    <dd>Ground Level</dd>
+                    <dd>Only One Way</dd>
+                    <dd>Fresh Tattoo</dd>
+                    <dd>Cleaning Crew</dd>
+                    <dd>Murder at the 18th St. Garage</dd>
+                    <dd>From the Nebraska Plant</dd>
+                    <dd>Same as Cash</dd>
+                    <dd>Water Tower</dd>
+                    <dd>Jenny III</dd>
+                    <dd>Going to Dallas</dd>
+                    <dd>Great Pirates</dd>
+                    
+                </dl>
+            </div>
+        </section>
+
+        <section id="game">
+            <h2 class="larger-h2">Play & win!</h2>
+            <div id="game-instructions">
+                <p>We're on tour currently, and might be coming to a venue near you in the near future. Guess the number below correctly, and you'll gain access to a preorder code for tickets to out next concert!</p>
+                <label for="guess">Guess a number between 1 and 10:</label>
+                <input type="text" name="guess" id="guess">
+                <button id="guess-btn" class="bttn-style">Take a guess</button>
+            </div>
+
+            <div id="game-results">
+                <p id="outcome">Play Now!</p>
+                <dl>
+                    <dt>Your guess:</dt>
+                    <dd id="show-guess"></dd>
+                    <dt>Winning number:</dt>
+                    <dd id="winning-num"></dd>
+                </dl>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Reach out and say hi!</p>
+            <form>
+                <div id="names">
+                    <label for="fName">First Name<span class="required">*</span></label>
+                    <input type="text" name="fName" id="fName" autocomplete="given-name" placeholder="First Name" required>
+                    <label for="lName">Last Name<span class="required">*</span></label>
+                    <input type="text" name="lName" id="lName" autocomplete="family-name" placeholder="Last Name" required>
+                </div>
+                
+                <div id="nums">
+                    <fieldset>
+                        <legend>Contact Method<span class="required">*</span></legend>
+                        <label for="prefEmail">
+                            <span class="radio-input">
+                                <input type="radio" name="contactPref" id="prefEmail" required checked>
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Email</span>
+                        </label>
+                        <label for="prefPhone">
+                            <span class="radio-input">
+                                <input type="radio" name="contactPref" id="prefPhone">
+                                <span class="radio-control"></span>
+                            </span>
+                            <span class="radio-label">Phone</span>
+                        </label>
+                    </fieldset>
+
+                    <label for="email">Email Address<span class="required">*</span></label>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="Email Address" required>
+                    <label for="phone">Phone Number<span class="required">*</span></label>
+                    <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Phone Number" required>
+                </div>
+
+                <div id="comm">
+                    <label for="comments">Comments<span class="required">*</span></label>
+                    <input type="textarea" name="comments" id="comments" placeholder="Tell us whats on your mind" required>
+                </div>
+                <input type="submit" name="mySubmit" id="mySubmit" value="Submit" class="bttn-style">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Mountain Goats</p>
+        <section id="social">
+            <ul>
+                <li>                         
+                    <a href="#" title="Twitter">
+                        <img src="images/icons8-twitter.svg" alt="twitter icon">
+                    </a>
+                </li>
+                <li>                         
+                    <a href="#" title="Facebook">
+                        <img src="images/icons8-facebook.svg" alt="facebook icon">
+                    </a>
+                </li>
+                <li>                         
+                    <a href="#" title="TikTok">
+                        <img src="images/icons8-tiktok.svg" alt="tiktok icon">
+                    </a>
+                </li>
+                <li>                         
+                    <a href="#" title="Spotify">
+                        <img src="images/icons8-spotify.svg" alt="spotify icon">
+                    </a>
+                </li>
+                <li>                         
+                    <a href="#" title="YouTube">
+                        <img src="images/icons8-youtube.svg" alt="youtube icon">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+  </body>
+</html>

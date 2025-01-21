@@ -1,0 +1,412 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Libre+Caslon+Display&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+
+  /* color variables */
+  --gold: #D4A862;
+  --blue-grey: #373A3C;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+  
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* FONT STYLING */
+
+body{
+    font-size: 16pt;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Libre Caslon Display', serif;
+    font-size: 60pt;
+}
+
+main,
+nav{
+    font-family: 'Host Grotesk';
+}
+
+h2{
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+}
+
+#about h2,
+#game h2{
+    color: var(--blue-grey);
+}
+
+a{
+    text-decoration: none;
+}
+
+.sr-only{
+    display: none;
+}
+
+nav a{
+    font-weight: bold;
+}
+
+nav a,
+#shop h2{
+    color: var(--gold);
+}
+
+h2,
+h1,
+button,
+#shop a,
+#music dt{
+    text-transform: uppercase;
+}
+
+
+#shop, 
+header,
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#release-year{
+    font-style: italic;
+    color: #b4b4b4;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+    padding: 25px;
+}
+
+#shop{
+    height: 850px; 
+    position: relative;
+}
+
+#bg-img{
+    background-image: url(images/jenny_album.webp);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    filter: blur(3px);
+    height: 800px;
+}
+
+/* centering the text in the shop section over the image */
+#shop h2,
+#shop a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*making sure the text is still readable */
+
+#shop h2{
+    font-size: 60pt;
+    -webkit-text-stroke-color: #42340c;
+    -webkit-text-stroke-width: .5px;
+    top: 250px;
+}
+
+
+.bttn-style{
+    background-color: var(--gold);
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* adding pdding to main sections */
+#music,
+#game,
+#contact{
+    padding: 100px;
+}
+
+
+#about {
+    display: flex;
+   height: 900px;
+    overflow: hidden; /* Ensures no extra spacing */
+}
+
+/* Text content styling */
+.text-content {
+    flex: 1; /* Takes up remaining space on the left */
+    padding: 100px 100px; /* Adjust as needed */
+    background-color: #f9f9f9; /* Optional: Background color for text area */
+    
+}
+
+/* Image content styling */
+.image-content {
+    flex: 0 0 50%; /* Adjust width; '50%' makes it occupy half the section */
+    max-width: 50%; /* Ensures no more than 50% */
+    position: relative; /* Helps manage the image size and fit */
+}
+
+.image-content img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    object-position: top;
+}
+
+/* creating a grid container to organize the alblum display section */
+#music{
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+#button-group{
+    grid-row: 5; 
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+#button-group button{
+    padding: 10px;
+    font-size: 16pt;
+    color: var(--gold); 
+    background-color: transparent; 
+    border: none; 
+    border-top: 2px solid var(--gold); 
+    border-bottom: 2px solid var(--gold); 
+   cursor: pointer;  /* lets users know its clickable */
+}
+
+#product-display{
+    grid-column-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: 50px 50px 600px;
+    margin-top: 50px;
+    column-gap: 50px;
+
+}
+
+#music h3{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#music h2 + p{
+    grid-row-start: 2;
+}
+
+
+#music img{
+    width: 600px;
+    grid-row: 1 / span 3;
+}
+
+#music dt{
+    padding: 30px 0 20px 0;
+}
+
+#music dd{
+    padding-bottom: 10px;
+    font-size: 14pt;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: 700px 300px;
+    grid-template-rows: 1fr 3fr;
+    column-gap: 50px;
+}
+
+#game-instructions{
+    grid-column-start: 1;
+}
+
+#game-instructions p{
+    padding-bottom: 50px;
+}
+
+#game-instructions label{
+    font-size: 18pt;
+}
+
+#guess{
+    display: inline-block;
+    height: 50px;
+    width: 60px;
+    margin: 0 15px;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+}
+
+#outcome{
+    font-family: 'Bebas Neue';
+    font-size: 46pt;
+    color: var(--gold);
+}
+
+#game-results dt{
+    padding-top: 15px;
+}
+
+#contact{
+    background-color: black;
+    color: white;
+}
+
+
+#contact p{
+    padding-bottom: 80px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    justify-items: center;
+}
+
+#mySubmit{
+    grid-column: 3;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    top: -30px
+}
+
+#names,
+#nums,
+#comm{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+#names,
+#nums{
+    grid-row: 1 / span 2;
+}
+
+form input[type=text],
+form input[type=tel],
+form input[type=email],
+form input[type=textarea]{
+    padding: 10px;
+    margin: 5px 0 25px 0;
+    width: 300px;
+}
+
+fieldset{
+    padding-bottom: 35px;
+}
+
+fieldset label{
+    padding: 20px;
+}
+
+fieldset legend{
+    padding-bottom: 15px;
+}
+
+footer{
+    padding: 50px 0;
+}
+
+footer p{
+    padding-bottom: 50px;
+}
+
+#social ul{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+a img{
+    width: 50px;
+}
+
+
+
+
+
+
+
